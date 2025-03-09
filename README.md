@@ -40,21 +40,21 @@ Example request:
   "type": "training_program_started",
   "userId": 1
 }
-
+```
+```json
 {
   "id": 46,
   "type": "training_program_finished",
   "userId": 1
 }
-
+```
+```json
 {
   "id": 46,
   "type": "training_program_cancelled",
   "userId": 1
 }
-
-```  
-
+```
 #### (3) **Send Notification**  
 **`POST /v1/notify`**  
 Automatically triggered when:  
@@ -66,7 +66,8 @@ Example request:
   "userEmail": "emadmahfouz8811@gmail.com",
   "message": "Hey! Start your training session now!."
 }
-
+```
+```json
 {
   "userEmail": "emadmahfouz8811@gmail.com",
   "message": "Great job, 1! You’ve completed your daily training with 45 minutes of effort! Keep pushing towards your fitness goals!."
