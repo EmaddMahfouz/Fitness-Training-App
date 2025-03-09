@@ -8,8 +8,11 @@ The **Fitness Training App** is a backend service built with **Spring Boot** to 
 - **Notification System**: Calls the `/v1/notify` API to send user engagement notifications.  
 
 ###  Tech Stack  
-- **Backend**: Java, Spring Boot, RESTful API.
-- **Database**: MySQL, JPA.
+- **Backend**: Java, Spring Boot.
+- **Database**: MySQL with Spring Data JPA
+- **Scheduler**: Spring Scheduler for automated background tasks.
+- **API Communication**: REST API using RestTemplate for inter-service interaction.
+- **Logging**: SLF4J with Logback.
 - **Tools**: Maven, Postman.
 - **IDE**: IntelliJ.
 
@@ -34,9 +37,22 @@ Example request:
 ```json
 {
   "id": 46,
+  "type": "training_program_started",
+  "userId": 1
+}
+
+{
+  "id": 46,
   "type": "training_program_finished",
   "userId": 1
 }
+
+{
+  "id": 46,
+  "type": "training_program_cancelled",
+  "userId": 1
+}
+
 ```  
 
 #### (3) **Send Notification**  
@@ -48,10 +64,14 @@ Example request:
 ```json
 {
   "userEmail": "emadmahfouz8811@gmail.com",
-  "message": "Congrats! You completed 45 minutes of training."
+  "message": "Hey! Start your training session now!."
+}
+
+{
+  "userEmail": "emadmahfouz8811@gmail.com",
+  "message": "Great job, 1! You’ve completed your daily training with 45 minutes of effort! Keep pushing towards your fitness goals!."
 }
 ```  
-
 ### ⚙️ Setup Instructions  
 
 1. **Clone the Repository**  
