@@ -12,7 +12,6 @@ The **Fitness Training App** is a backend service built with **Spring Boot** to 
 - **Database**: MySQL with Spring Data JPA
 - **Scheduler**: Spring Scheduler for automated background tasks.
 - **API Communication**: REST API using RestTemplate for inter-service interaction.
-- **Logging**: SLF4J with Logback.
 - **Tools**: Maven, Postman.
 - **IDE**: IntelliJ.
 
